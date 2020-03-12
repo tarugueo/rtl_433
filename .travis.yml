@@ -240,12 +240,15 @@ matrix:
             - p7zip
       before_deploy: ./do_sysroot.sh
       deploy:
-        provider: bintray
-        file: "build/bintray.json"
-        user: "chzu"
-        key:
-          secure: Ynhd9UIByGUQPYA3Ow1Jap1bMxB0Pyw+pQV9iQJoG2yCW//ubJ+UnHfYb3KfIWrEK7VVP52m7Mwk9+PrYBmrkNbc3IYc2rYGdbHgC82SRiPbOIxPUwz2X81j1AQZZhN2nc95yudsajpoSqQ7AkIyMyt5FN3NSNN44tKYD5YjuNUaYa2b6SEWNFyG7MHxCqqyykNIraxPS5I5ZOmN4t+ugpgcKd8gLCd4TJQ0355WfHhr1oTrJvgvxGirXOsUm3lC0lequ+BEVHjOjeKl8vybwiculLTIn2rgc9ysoca8sa60+W5ArTo56rPbODQTqZ7sEWSKhE48dJx36JGlM7zLrMLTzcP6tyhpJ2qwG0KQWJkAdCtkSTlOc5+nTojsS6eG8aN3/D/PuxRvjZO3zSwt9OsL2BPWo0DnZ2ZluMN0wzGTJeN/+B4f7rmX0rX9yLrxRMWftr69rmf4dS/ymtK8Yy9QLqgV3SKoIkhMy4e8ksBDnJ227+EwrLktRKaTt04Vg51Ip2mIlCJT9gR93NlsUgMtwCfexAgbIFrPykycwt+Ra6gADMrfZz2sHmphS6+WwsIgCljm9eHSYzU66lLwb1AAI4tuSNlPDAKUBzwNRfE2OArnGvLhn9pSUQ9zpyXgDpmBuj4hI9kfZArLBQBRCGP7gZM2lHh6nmWXDm6y4Ak=
+        provider: releases
+        file: "rtl_433-win-x32.zip" 
+        #"build/bintray.json"
+        user: "tarugueo"
+        api_key:
+          secure: "e9bnP6nTBOv7lQQWK5+VFxKJvxUq3BeKnFxCqWa83jdjlJB4pxebgNplgvgCqGFkWWvNvHwOxqNSzovGxvFyg6ui1Xf1kBlOl/x8AcTi4vob7qPA04j/s22oLBvs0h/lyCrh9BIwGfdiddc1HGMQU5Qv/HKzRY2HyRue/ajPpcFN2lzb5fRla+Puicr9RF1SNnQnMnKMZRbsVLCsd8cE9S58Dus/oNV9Kk1Ij03awBQi4t+oOpdkg3aT2md8RQVtqCyFpymsgQS42dWe3ICthRvyNqGHHsrzWWaTChoVZuMEOGSMDmsNtgLsUa7vjlmIGhzxUlDFmOVRWGaCpQyHSA5iS6ByvPbZAr6U3xPEId8nox/BvnR8wiuhx7bLZwVjBOPyBznMZ9HHu7EXiOMnzoo/w8fkbzOwdR2hGVag4nzw328ZWi/tfkB0RdjA/BpBLHndmXrJXBQYSf8KIEWDhLyW9UlmJEC+qn7A93LEiK0Wh7n66OMuEiI1jrsU/LmjprQ+DpfIdmA1394j2e9xWaYsl6XJSxhHLv0et0EDaKlcC73ssdRMc8kVTKb9kwaOSEXosR6UJisej6ytL3fu1Vo0q89h0rsmA/vMB28/r1R3WFEr8+l5guTfhGPjreyfOwL/XdlmfL675I5HxN7PQlT8boPLwqB7r0dIhKR0qqg="
         skip_cleanup: true # to upload artifacts created during the build
+        on:
+          tags: true
         #on:
         #  branch: master
         #  condition: "-n $BINTRAY_DEPLOY"
