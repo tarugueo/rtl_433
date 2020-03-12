@@ -141,6 +141,20 @@ matrix:
             - rtl-sdr
             - librtlsdr-dev
             - cmake
+            - p7zip
+            # TBC
+      before_deploy: ./do_sysroot.sh
+      deploy:
+        provider: releases
+        #file: "rtl_433-win-x32.zip" 
+        #"build/bintray.json"
+        user: "tarugueo"
+        api_key:
+          secure: e9bnP6nTBOv7lQQWK5+VFxKJvxUq3BeKnFxCqWa83jdjlJB4pxebgNplgvgCqGFkWWvNvHwOxqNSzovGxvFyg6ui1Xf1kBlOl/x8AcTi4vob7qPA04j/s22oLBvs0h/lyCrh9BIwGfdiddc1HGMQU5Qv/HKzRY2HyRue/ajPpcFN2lzb5fRla+Puicr9RF1SNnQnMnKMZRbsVLCsd8cE9S58Dus/oNV9Kk1Ij03awBQi4t+oOpdkg3aT2md8RQVtqCyFpymsgQS42dWe3ICthRvyNqGHHsrzWWaTChoVZuMEOGSMDmsNtgLsUa7vjlmIGhzxUlDFmOVRWGaCpQyHSA5iS6ByvPbZAr6U3xPEId8nox/BvnR8wiuhx7bLZwVjBOPyBznMZ9HHu7EXiOMnzoo/w8fkbzOwdR2hGVag4nzw328ZWi/tfkB0RdjA/BpBLHndmXrJXBQYSf8KIEWDhLyW9UlmJEC+qn7A93LEiK0Wh7n66OMuEiI1jrsU/LmjprQ+DpfIdmA1394j2e9xWaYsl6XJSxhHLv0et0EDaKlcC73ssdRMc8kVTKb9kwaOSEXosR6UJisej6ytL3fu1Vo0q89h0rsmA/vMB28/r1R3WFEr8+l5guTfhGPjreyfOwL/XdlmfL675I5HxN7PQlT8boPLwqB7r0dIhKR0qqg=
+        skip_cleanup: true # to upload artifacts created during the build
+        #on:
+        #  tags: true
+            
     - name: "ARM32 Xenial default (GCC 5.4.0, CMake 3.5.1)"
       compiler: gcc
       arch: arm64
