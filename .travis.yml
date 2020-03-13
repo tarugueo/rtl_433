@@ -259,9 +259,10 @@ matrix:
         #"build/bintray.json"
         user: "tarugueo"
         api_key:
-          secure: "e9bnP6nTBOv7lQQWK5+VFxKJvxUq3BeKnFxCqWa83jdjlJB4pxebgNplgvgCqGFkWWvNvHwOxqNSzovGxvFyg6ui1Xf1kBlOl/x8AcTi4vob7qPA04j/s22oLBvs0h/lyCrh9BIwGfdiddc1HGMQU5Qv/HKzRY2HyRue/ajPpcFN2lzb5fRla+Puicr9RF1SNnQnMnKMZRbsVLCsd8cE9S58Dus/oNV9Kk1Ij03awBQi4t+oOpdkg3aT2md8RQVtqCyFpymsgQS42dWe3ICthRvyNqGHHsrzWWaTChoVZuMEOGSMDmsNtgLsUa7vjlmIGhzxUlDFmOVRWGaCpQyHSA5iS6ByvPbZAr6U3xPEId8nox/BvnR8wiuhx7bLZwVjBOPyBznMZ9HHu7EXiOMnzoo/w8fkbzOwdR2hGVag4nzw328ZWi/tfkB0RdjA/BpBLHndmXrJXBQYSf8KIEWDhLyW9UlmJEC+qn7A93LEiK0Wh7n66OMuEiI1jrsU/LmjprQ+DpfIdmA1394j2e9xWaYsl6XJSxhHLv0et0EDaKlcC73ssdRMc8kVTKb9kwaOSEXosR6UJisej6ytL3fu1Vo0q89h0rsmA/vMB28/r1R3WFEr8+l5guTfhGPjreyfOwL/XdlmfL675I5HxN7PQlT8boPLwqB7r0dIhKR0qqg="
+          secure: "LCQFI/+OMxYjx257yC2gN0uNKYZiFcAMAy0a34KHjuBSU4CH7jRQpT1YocmV79DrU343wcAKraKwBQgsitq34zIMO05AoXupicKHRh8V/CdoNo2gYhesOjY0J+5Ss8xEi1cyfqrZPM3JcSzNP+B/XmZAHzlW/Ac1lDkzJrHXrbMd7Pn/1n6V38YrtGBsv2asg23Rn/IyjoUXWe6pYE7M7dVfPTBU4Duuo8YcFAS3X+4itZ4AZRgslCDt69ZHQkPGD8N4KqB3vosSlV2NGKavWArHUY+rMlDFAs52K9Fqn52N/9qVawqG/VTTLVzhoLv7i67EfiETorl9Ds+evdusZYd9hKlIXjrVfSXtUUIWyfS+TzOM/3DZVjrEe2P3taSmjRiEPumZqpITrKZVaTWQWs13KpXrlVGmCN91fuy8IA6OJzoOAvuWAPQgELcgC2TOSmRcMv76b4FC2fGm8g5IOSMj/ly3Rq8WycefOnU3MZF2a333lpzm8E+PFGuE0PZNY9eziq9oHhoQjLjhl4rVuR/PQIO5O1wigXpiJFEa/tlZtpbnqpSHAq/8RgjZoYXCCBrY+L76AxVIVLlqiZSVKfHfaNH2GFrZ/66+S4CZVz3O/QU4lAN39mkNoLVwnmH4LBFZvyUIaBkAe2wkuM1gFpyNaPDaxLzKkku8s4CzwdE=" 
         skip_cleanup: true # to upload artifacts created during the build
         on:
+          all_branches: true
           tags: true
         #on:
         #  branch: master
